@@ -30,3 +30,4 @@ def create(request):
     form = ArtilesForm()
     
     return render(request, 'novosti/create.html', {'form': form})
+

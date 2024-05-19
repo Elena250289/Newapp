@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpRequest, HttpResponseNotFound
 
 
 def index(request):
@@ -10,4 +10,9 @@ def index(request):
 
 def about(request):
     return render(request, 'posts/about.html')
-# Create your views here.
+
+
+def pageNotFound(request, exception):
+    return HttpResponseNotFound('<h1>Страница не найдена</h1>')
+
+
